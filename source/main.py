@@ -5,7 +5,7 @@ import sys
 def main():
 
     """
-    The entrypoint of the package. Does not if not printing the parameters
+    The entrypoint of the package. Does nothing if not printing the parameters
     """
 
     parser = argparse.ArgumentParser()
