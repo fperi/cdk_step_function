@@ -152,7 +152,9 @@ class MainStack(core.Stack):
             "csfeJobDef",
             job_definition_name=f"csfe-{branch_name}",
             container=batch.JobDefinitionContainer(
-                image=ecs.EcrImage(repo, branch_name), memory_limit_mib=2000, vcpus=1,
+                image=ecs.EcrImage(repo, branch_name),
+                memory_limit_mib=2000,
+                vcpus=1,
             ),  # which image to use
             retry_attempts=1,
         )

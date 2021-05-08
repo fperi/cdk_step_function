@@ -46,7 +46,9 @@ def main():
             docker_client = docker.from_env()
             image_tag = f"{ecrrepository}:{branch}"
             image, build_log = docker_client.images.build(
-                path=os.path.join(CURRENT_DIR, "../source"), tag=image_tag, rm=True,
+                path=os.path.join(CURRENT_DIR, "../source"),
+                tag=image_tag,
+                rm=True,
             )
 
             # get aws tokens
@@ -81,13 +83,13 @@ def main():
             ):
                 print(line)
 
-            print(f"Built and pushed")
+            print("Built and pushed")
         finally:
             if original:
                 config.write_text(original)
 
     else:
-        print(f"Aborted")
+        print("Aborted")
 
     sys.exit(0)
 

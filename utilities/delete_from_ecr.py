@@ -27,9 +27,9 @@ def main():
         ECR_CLIENT.batch_delete_image(
             repositoryName=ecrrepository, imageIds=[{"imageTag": branch}]
         )
-        print(f"Deleted")
+        print("Deleted")
     else:
-        print(f"Aborted")
+        print("Aborted")
 
     sys.exit(0)
 
