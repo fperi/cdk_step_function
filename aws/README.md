@@ -27,7 +27,23 @@ cdk deploy all -c branch=<branch_name> -c ecr_repository=<ecr_repo_name> -c acco
 ```
 
 At this point the step function should appear in the AWS console. You can
-trigger a new execution passing the following json as input.
+trigger a new execution passing the following json as input:
+
+```
+{
+  "parameters": {
+    "step1_parameter": "step1",
+    "step2_parameters": [
+      "step2a",
+      "step2b"
+    ],
+    "step3_parameters": [
+      "step3a",
+      "step3b"
+    ]
+  }
+}
+```
 
 Destroy with:
 
