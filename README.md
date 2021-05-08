@@ -4,7 +4,8 @@ This is an example of how to deploy a step function through CDK.
 
 ### Requirements
 
-You need Node.js and CDK installed on your system. Three requirement files are
+You need Node.js and CDK installed on your system. AWS credentials should be available
+either as ENV variables or inside `$HOME/.aws/credentials`. Three requirement files are
 then provided:
 
 ```
